@@ -14,10 +14,11 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins_home:/var/jenkins_home #on host, this dir is in the docker volumes
-    logging:
-      driver: syslog #available on system that has docker daemon, else would consider docker native drivers
-      options:
-        tag: jenkins-service
+    logging: # will change to syslog another time
+      driver: local
+      # driver: syslog #available on system that has docker daemon, else would consider docker native drivers
+      # options:
+      #   tag: jenkins-service
 
 
 volumes:
