@@ -2,7 +2,7 @@
 // @Library('shared-libraries') _
 // or
 // library('shared-libraries').com....
-library 'shared-lib' //only global vars imported at runtime
+library('shared-lib') //only global vars imported at runtime
 
 // non-predefined library in jenkins system
 // library identifier: 'shared-lib@develop', retriever: modernSCM(
