@@ -1,10 +1,20 @@
 
 services:
   jenkins:
-    build: ./jenkins-custom.Dockerfile
+    # user: root
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    image: custom-jenkins-docker:v1
+    build:
+      context: ../jenkins-compose-build-context
+      dockerfile: ./jenkins-custom.Dockerfile
     ports:
       - "8180:8080" #jenkins web ui
       - "51800:50000" #jnlp agent connection
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins_home:/var/jenkins_home #on host, this dir is in the docker volumes
+
+volumes:
+  jenkins_home: #use default local driver
+    external: true #since already exists on target VM
