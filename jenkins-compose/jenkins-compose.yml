@@ -1,7 +1,7 @@
 
 services:
   jenkins:
-    # user: root
+    user: root
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     image: custom-jenkins-docker:v1
