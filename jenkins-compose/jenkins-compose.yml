@@ -1,0 +1,10 @@
+
+services:
+  jenkins:
+    build: ./jenkins-custom.Dockerfile
+    ports:
+      - "8180:8080" #jenkins web ui
+      - "51800:50000" #jnlp agent connection
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jenkins_home:/var/jenkins_home #on host, this dir is in the docker volumes
