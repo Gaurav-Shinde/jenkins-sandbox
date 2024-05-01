@@ -37,6 +37,7 @@ pipeline{
             steps{
                 script{
                     linuxClosureBlock{
+                        sh 'echo I hope this is a Linux agent!'
                         sh 'whoami'
                     }
                 }

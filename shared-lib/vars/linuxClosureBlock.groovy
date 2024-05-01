@@ -1,6 +1,6 @@
 // vars/linuxClosureBlock.groovy
 def call(Closure body) {
-    node('linux') {
+    node { // can be node('agent-label-of-platform')
         body()
     }
 }
