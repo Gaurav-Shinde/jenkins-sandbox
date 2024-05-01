@@ -1,5 +1,5 @@
 // only needed if src classes will be imported and utilized at script compile time
-@Library('shared-libraries') _
+@Library('shared-lib') _
 // or
 // library('shared-libraries').com....
 // library 'shared-lib' //only global vars imported at runtime
