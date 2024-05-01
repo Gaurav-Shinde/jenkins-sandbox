@@ -45,7 +45,7 @@ pipeline{
         stage('testing configMapVar global var'){
             steps{
                 script{
-                    configMapVar([fn:'Joe' ln:'Biden'])
+                    configMapVar([fn:'Joe',ln:'Biden'])
                 }
             }
         }
