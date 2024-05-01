@@ -1,7 +1,7 @@
 
 services:
-  jenkins:
-    user: root
+  jenkins-server:
+    # user: root
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     image: custom-jenkins-docker:v1
@@ -14,7 +14,12 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins_home:/var/jenkins_home #on host, this dir is in the docker volumes
+    logging:
+      driver: syslog #available on system that has docker daemon, else would consider docker native drivers
+      options:
+        tag: jenkins-service
+
 
 volumes:
   jenkins_home: #use default local driver
-    external: true #since already exists on target VM
+    external: true #since already exists on target VM's docker dir
