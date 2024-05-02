@@ -1,4 +1,4 @@
-@Library('shared-lib') _
+library 'shared-lib'
 
 void call(){
     stage("SayMessage: greet"){
