@@ -1,4 +1,4 @@
-// @Library('shared-lib') _
+@Library('shared-lib') _
 
 void call(){
     stage("SayMessage: greet"){
