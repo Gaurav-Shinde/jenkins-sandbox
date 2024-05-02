@@ -2,6 +2,7 @@
 // @Library('shared-lib') _
 jte{
     pipeline_template = 'first-template.groovy'
+    permissive_initialization = true
 }
 libraries{
     greetings
