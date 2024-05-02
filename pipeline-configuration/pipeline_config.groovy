@@ -3,6 +3,7 @@
 jte{
     pipeline_template = 'first-template.groovy'
     permissive_initialization = true
+    reverse_library_resolution = true
 }
 libraries{
     greetings
